@@ -22,6 +22,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install -g
     - run: npm install hexo-cli -g
+    - run: rm -rf node_modules && npm install --force
     - run: hexo clean
