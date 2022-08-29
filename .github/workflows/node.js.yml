@@ -24,8 +24,8 @@ jobs:
     - run: rm -rf node_modules && npm install --force
     - run: hexo clean
     - run: hexo generate
-    - uses: sudosubin/git-clone-action@v1.0.1
     - name: Git Clone io.page
+      uses: sudosubin/git-clone-action@v1.0.1
       with:
         repository: git@github.com:chi-bin/chi-bin.github.io.git
         path: gss
