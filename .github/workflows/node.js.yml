@@ -24,8 +24,11 @@ jobs:
     - run: rm -rf node_modules && npm install --force
     - run: hexo clean
     - run: hexo generate
-    - name: Git Clone io.page
-      uses: sudosubin/git-clone-action@v1.0.1
+    - name: Clone Github Repo Action
+      uses: GuillaumeFalourd/clone-github-repo-action@v2
       with:
-        repository: git@github.com:chi-bin/chi-bin.github.io.git
-        path: gss
+        # Repository Owner
+        owner: chi-bin
+        # Repository name
+        repository: https://github.com/chi-bin/chi-bin.github.io.git
+        access-token: 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
